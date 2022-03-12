@@ -3,7 +3,7 @@ from tkinter import filedialog
 from tkinter import *
 from PIL import ImageTk, Image
 
-import numpy
+import numpy as np
 #load the trained model to classify sign
 from keras.models import load_model
 model = load_model('traffic_classifier.h5')
@@ -66,11 +66,14 @@ def classify(file_path):
     global label_packed
     image = Image.open(file_path)
     image = image.resize((30,30))
-    image = numpy.expand_dims(image, axis=0)
-    image = numpy.array(image)
+    image = np.expand_dims(image, axis=0)
+    image = np.array(image)
     print(image.shape)
-    pred = model.predict_classes([image])[0]
-    sign = classes[pred+1]
+    pred = model.predict([image])[0]
+    newPred = pred+1
+    newPred = [int(i) for i in newPred]
+    maxValue = max(newPred)
+    sign = classes[newPred.index(maxValue)+1]
     print(sign)
     label.configure(foreground='#011638', text=sign)
    
