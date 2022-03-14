@@ -1,3 +1,8 @@
+# Eduardo Expósito Barrera
+# Final Degree Project
+# Degree in Computer Engineering (Fourth)
+# File containing the type of signs
+
 # Dictionary to label all traffic signs class.
 classes = {
     1: "Speed limit (20km/h)",

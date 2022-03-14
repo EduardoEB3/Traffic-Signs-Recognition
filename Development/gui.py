@@ -1,7 +1,7 @@
 # Eduardo Expósito Barrera
 # Final Degree Project
 # Degree in Computer Engineering (Fourth)
-# User interface
+# File containing the user interface
 
 import numpy as np
 import tkinter as tk
