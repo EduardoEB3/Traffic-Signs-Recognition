@@ -19,9 +19,20 @@
 The directory is organized as follows:
   
       .
+      ├── Colab
+          ├── gui.ipynb
       ├── Development
+          ├── app
+              ├── app.py
+              ├── signs.py
+          ├── img
+              ├── ULL.png
+          ├── information
+              ├── information.md
+          ├── model
+              ├── traffic_classifier.h5
           ├── gui.py
-          ├── traffic_classifier.py
+          ├── Pipfile
           ├── traffic_sign.py
       ├── Initial
           ├── Python-Project-Traffic-Sign-Classification.zip
