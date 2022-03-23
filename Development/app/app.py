@@ -60,11 +60,6 @@ if option != "Select":
         st.markdown(markdown.markdown(text), unsafe_allow_html=True)
 
 else:
-    image = Image.open("../img/ULL.png")
-    st.caption(
-        "This project is a prototype application on traffic sign recognition for the Final Degree Project."
-    )
-    image = image.resize((454, 454))
-    st.image(image)
-    st.caption("Eduardo Expósito Barrera")
-    st.caption("Universidad de La Laguna")
+    inputFile = codecs.open("../information/home.md", mode="r", encoding="utf-8")
+    text = inputFile.read()
+    st.markdown(markdown.markdown(text), unsafe_allow_html=True)
