@@ -33,10 +33,15 @@ if option != "Select":
             read = True
 
         if read:
-            image = image.resize((30, 30))
-            st.image(image.resize((10 * image.width, 10 * image.height)))
             read = False
-            if st.button("Classify Image"):
+            click = False
+            _, centerColum, _ = st.columns(3)
+            image = image.resize((30, 30))
+            with centerColum:
+                st.image(image.resize((10 * image.width, 10 * image.height)))
+                if st.button("Classify Image"):
+                    click = True
+            if click:
                 image = np.expand_dims(image, axis=0)
                 image = np.array(image)
                 print(image.shape)
@@ -50,6 +55,7 @@ if option != "Select":
                 for percentComplete in range(100):
                     time.sleep(0.01)
                     loadingBar.progress(percentComplete + 1)
+                time.sleep(0.2)
                 st.caption(sign)
 
     elif option == "Information":
