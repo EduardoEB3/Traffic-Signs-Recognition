@@ -1,5 +1,6 @@
 # Traffic Signs Recognition
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+[![GitHub Pages](https://img.shields.io/badge/Web-GitHub%20Pages-informational)](https://eduardoeb3.github.io/Traffic-Signs-Recognition/)
 - Universidad de La Laguna
 - **Subject:** Final Degree Project
 - **Project:** Traffic Signs Recognition
@@ -28,6 +29,7 @@ The directory is organized as follows:
           ├── img
               ├── ULL.png
           ├── information
+              ├── home.md
               ├── information.md
           ├── model
               ├── traffic_classifier.h5
