@@ -1,3 +1,4 @@
+# Import required libraries
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -6,9 +7,9 @@ import tensorflow as tf
 from PIL import Image
 import os
 from sklearn.model_selection import train_test_split
-from keras.utils import to_categorical
-from keras.models import Sequential, load_model
-from keras.layers import Conv2D, MaxPool2D, Dense, Flatten, Dropout
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.models import Sequential, load_model
+from tensorflow.keras.layers import Conv2D, MaxPool2D, Dense, Flatten, Dropout
 
 data = []
 labels = []
@@ -22,7 +23,7 @@ for i in range(classes):
 
     for a in images:
         try:
-            image = Image.open(path + "\\" + a)
+            image = Image.open(path + "/" + a)
             image = image.resize((30, 30))
             image = np.array(image)
             # sim = Image.fromarray(image)
@@ -36,10 +37,12 @@ data = np.array(data)
 labels = np.array(labels)
 
 print(data.shape, labels.shape)
+
 # Splitting training and testing dataset
 X_train, X_test, y_train, y_test = train_test_split(
     data, labels, test_size=0.2, random_state=42
 )
+
 
 print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
 
@@ -75,7 +78,7 @@ history = model.fit(
 )
 model.save("my_model.h5")
 
-# plotting graphs for accuracy
+# Plotting graphs for accuracy
 plt.figure(0)
 plt.plot(history.history["accuracy"], label="training accuracy")
 plt.plot(history.history["val_accuracy"], label="val accuracy")
@@ -94,7 +97,7 @@ plt.ylabel("loss")
 plt.legend()
 plt.show()
 
-# testing accuracy on test dataset
+# Testing accuracy on test dataset
 from sklearn.metrics import accuracy_score
 
 y_test = pd.read_csv("Test.csv")
@@ -111,9 +114,11 @@ for img in imgs:
 
 X_test = np.array(data)
 
-pred = model.predict_classes(X_test)
+pred = model.predict(X_test)
 
-# Accuracy with the test data
-from sklearn.metrics import accuracy_score
+# Accuracy and stats with the test data
+from sklearn.metrics import accuracy_score, classification_report
 
-print(accuracy_score(labels, pred))
+print("Accuracy: ", accuracy_score(labels, np.argmax(pred, axis=1)))
+
+print(classification_report(labels, np.argmax(pred, axis=1)))
