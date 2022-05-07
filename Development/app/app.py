@@ -1,4 +1,3 @@
-from cgi import print_directory
 import streamlit as st
 import numpy as np
 import time
@@ -90,12 +89,13 @@ if option != "Home":
 
     elif option == "Information":
         inputFile = codecs.open(
-            "https://github.com/EduardoEB3/Traffic-Signs-Recognition/blob/master/Development/information/information.md",
-            mode="r",
-            encoding="utf-8",
+            "../information/information.md", mode="r", encoding="utf-8"
         )
         st.markdown(inputFile.read(), unsafe_allow_html=True)
 
 else:
+    import os
+
+    print(os.path.dirname(os.path.abspath(__file__)))
     inputFile = codecs.open("../information/home.md", mode="r", encoding="utf-8")
     st.markdown(inputFile.read(), unsafe_allow_html=True)
