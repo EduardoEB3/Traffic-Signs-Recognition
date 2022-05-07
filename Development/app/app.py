@@ -89,7 +89,9 @@ if option != "Home":
 
     elif option == "Information":
         inputFile = codecs.open(
-            "../information/information.md", mode="r", encoding="utf-8"
+            "/app/traffic-signs-recognition/Development/information/information.md",
+            mode="r",
+            encoding="utf-8",
         )
         st.markdown(inputFile.read(), unsafe_allow_html=True)
 
