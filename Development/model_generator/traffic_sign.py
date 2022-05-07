@@ -2,13 +2,11 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import cv2
-import tensorflow as tf
 from PIL import Image
 import os
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.utils import to_categorical
-from tensorflow.keras.models import Sequential, load_model
+from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPool2D, Dense, Flatten, Dropout
 
 data = []
@@ -26,7 +24,6 @@ for i in range(classes):
             image = Image.open(path + "/" + a)
             image = image.resize((30, 30))
             image = np.array(image)
-            # sim = Image.fromarray(image)
             data.append(image)
             labels.append(i)
         except:
@@ -98,8 +95,6 @@ plt.legend()
 plt.show()
 
 # Testing accuracy on test dataset
-from sklearn.metrics import accuracy_score
-
 y_test = pd.read_csv("Test.csv")
 
 labels = y_test["ClassId"].values
