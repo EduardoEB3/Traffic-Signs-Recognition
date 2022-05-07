@@ -9,7 +9,8 @@ import codecs
 
 def recognition(nameFile):
     # Load the trained model to classify sign
-    model = load_model("/app/traffic-signs-recognition/Development/models/" + nameFile)
+    path = "/app/traffic-signs-recognition/Development/models/" + nameFile
+    model = load_model(path.encode().decode())
 
     uploaded_file = st.sidebar.file_uploader("Choose a file", type=["jpg", "png"])
 
@@ -68,7 +69,7 @@ if option != "Home":
                 nameFile = "traffic_classifier.h5"
                 st.caption("The default model is: " + nameFile)
 
-                recognition(nameFile.encode().decode())
+                recognition(nameFile)
 
             except OSError:
                 st.caption("The default model name does not exist.")
