@@ -94,5 +94,5 @@ if option != "Home":
         st.markdown(inputFile.read(), unsafe_allow_html=True)
 
 else:
-    inputFile = codecs.open("home.md", mode="r", encoding="utf-8")
+    inputFile = codecs.open(open("home.md", "rb"), mode="r", encoding="utf-8")
     st.markdown(inputFile.read(), unsafe_allow_html=True)
