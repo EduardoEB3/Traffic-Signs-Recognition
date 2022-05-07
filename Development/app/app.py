@@ -9,6 +9,7 @@ import codecs
 
 def recognition(nameFile):
     # Load the trained model to classify sign
+    st.caption("/app/traffic-signs-recognition/Development/models/" + nameFile)
     model = load_model("/app/traffic-signs-recognition/Development/models/" + nameFile)
 
 
