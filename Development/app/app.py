@@ -69,7 +69,7 @@ if option != "Home":
                 nameFile = "traffic_classifier.h5"
                 st.caption("The default model is: " + nameFile)
 
-                recognition(nameFile)
+                recognition(nameFile.encode().decode())
 
             except OSError:
                 st.caption("The default model name does not exist.")
