@@ -1,1 +1,1 @@
-pip3 install keras
+keras== 1.1.2
