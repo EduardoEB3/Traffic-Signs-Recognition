@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 keras = "*"
+"keras.models" = "*"
 
 [dev-packages]
 
