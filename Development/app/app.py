@@ -1,3 +1,4 @@
+from cgi import print_directory
 import streamlit as st
 import numpy as np
 import time
@@ -94,5 +95,6 @@ if option != "Home":
         st.markdown(inputFile.read(), unsafe_allow_html=True)
 
 else:
+    print_directory()
     inputFile = codecs.open("../information/home.md", mode="r", encoding="utf-8")
     st.markdown(inputFile.read(), unsafe_allow_html=True)
