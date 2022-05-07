@@ -94,5 +94,9 @@ if option != "Home":
         st.markdown(inputFile.read(), unsafe_allow_html=True)
 
 else:
-    inputFile = codecs.open("../information/home.md", mode="r", encoding="utf-8")
+    inputFile = codecs.open(
+        "app/traffic-signs-recognition/Development/information/home.md",
+        mode="r",
+        encoding="utf-8",
+    )
     st.markdown(inputFile.read(), unsafe_allow_html=True)
