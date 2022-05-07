@@ -9,7 +9,10 @@ import codecs
 
 def recognition(nameFile):
     # Load the trained model to classify sign
-    model = load_model("/app/traffic-signs-recognition/Development/models/" + nameFile)
+    model = load_model(
+        "/app/traffic-signs-recognition/Development/models/"
+        + nameFile.encode().decode()
+    )
 
     uploaded_file = st.sidebar.file_uploader("Choose a file", type=["jpg", "png"])
 
