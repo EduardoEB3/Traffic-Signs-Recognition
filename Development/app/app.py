@@ -10,7 +10,8 @@ import codecs
 def recognition(nameFile):
     # Load the trained model to classify sign
     path = "/app/traffic-signs-recognition/Development/models/" + nameFile
-    model = load_model(path.encode(encoding="UTF-8", errors="strict"))
+    prueba = path.encode(encoding="UTF-8", errors="strict")
+    model = load_model(prueba)
 
 
 st.title("Traffic Signs Recognition")
