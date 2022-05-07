@@ -9,7 +9,7 @@ import codecs
 
 def recognition(nameFile):
     # Load the trained model to classify sign
-    model = load_model("../models/" + nameFile)
+    model = load_model("/app/traffic-signs-recognition/Development/models/" + nameFile)
 
     uploaded_file = st.sidebar.file_uploader("Choose a file", type=["jpg", "png"])
 
@@ -96,8 +96,9 @@ if option != "Home":
         st.markdown(inputFile.read(), unsafe_allow_html=True)
 
 else:
-    import os
-
-    st.caption(os.path.dirname(os.path.abspath(__file__)))
-    # inputFile = codecs.open("../information/home.md", mode="r", encoding="utf-8")
-    # st.markdown(inputFile.read(), unsafe_allow_html=True)
+    inputFile = codecs.open(
+        "/app/traffic-signs-recognition/Development/information/home.md",
+        mode="r",
+        encoding="utf-8",
+    )
+    st.markdown(inputFile.read(), unsafe_allow_html=True)
