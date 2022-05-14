@@ -14,13 +14,12 @@ def recognition(nameFile):
     uploaded_file = st.sidebar.file_uploader("Choose a file", type=["jpg", "png"])
 
     image = Image.new("RGB", (1, 1))
-    read = False
+    # read = False
+    #    read = True
+    # if read:
+    #   read = False
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
-        read = True
-
-    if read:
-        read = False
         click = False
         _, centerColum, _ = st.columns(3)
         image = image.resize((30, 30))
