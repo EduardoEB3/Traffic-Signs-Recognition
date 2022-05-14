@@ -34,10 +34,7 @@ def recognition(nameFile):
             print(image.shape)
             try:
                 pred = model.predict([image])[0]
-                newPred = pred + 1
-                newPred = [int(i) for i in newPred]
-                maxValue = max(newPred)
-                sign = classes[newPred.index(maxValue) + 1]
+                sign = classes[pred.argmax(axis=-1) + 1]
                 loadingBar = st.progress(0)
                 for percentComplete in range(100):
                     time.sleep(0.01)
