@@ -15,9 +15,9 @@ def recognition(nameFile):
 
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
+        image = image.resize((30, 30))
         click = False
         _, centerColum, _ = st.columns(3)
-        image = image.resize((30, 30))
         with centerColum:
             st.image(image.resize((10 * image.width, 10 * image.height)))
             if st.button("Classify Image"):
