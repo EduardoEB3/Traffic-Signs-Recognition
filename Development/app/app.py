@@ -13,7 +13,7 @@ def recognition(nameFile):
 
     uploaded_file = st.sidebar.file_uploader("Choose a file", type=["jpg", "png"])
 
-    image = Image.new("RGB", (1, 1))
+    # image = Image.new("RGB", (1, 1))
     # read = False
     #    read = True
     # if read:
