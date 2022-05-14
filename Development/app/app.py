@@ -45,6 +45,7 @@ def recognition(nameFile):
                     + sign
                     + '" with percentage: '
                     + str(round(np.max(pred) * 100, 2))
+                    + "%"
                 )
             except ValueError:
                 st.caption(
