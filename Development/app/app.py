@@ -40,7 +40,12 @@ def recognition(nameFile):
                     time.sleep(0.01)
                     loadingBar.progress(percentComplete + 1)
                 time.sleep(0.2)
-                st.caption(sign)
+                st.caption(
+                    'Signal recognized as "'
+                    + sign
+                    + '" with percentage: '
+                    + str(round(np.max(pred) * 100, 2))
+                )
             except ValueError:
                 st.caption(
                     "The image you have selected cannot be sorted, choose another image."
