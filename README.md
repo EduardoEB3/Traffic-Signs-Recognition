@@ -1,6 +1,7 @@
 # Traffic Signs Recognition
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![GitHub Pages](https://img.shields.io/badge/Web-GitHub%20Pages-informational)](https://eduardoeb3.github.io/Traffic-Signs-Recognition/)
+[![App](https://img.shields.io/badge/App-Traffic%20Signs%20Recognition-important)](https://share.streamlit.io/eduardoeb3/traffic-signs-recognition/Development/app/app.py)
 - Universidad de La Laguna
 - **Subject:** Final Degree Project
 - **Project:** Traffic Signs Recognition
@@ -22,20 +23,24 @@ The directory is organized as follows:
       .
       ├── Colab
           ├── gui.ipynb
+          ├── traffic_sign.ipynb
       ├── Development
           ├── app
               ├── app.py
+              ├── requirements.txt
               ├── signs.py
           ├── img
               ├── ULL.png
           ├── information
               ├── home.md
               ├── information.md
-          ├── model
+          ├── model_generator
+              ├── traffic_sign.py
+          ├── models
+              ├── my_best_model.h5
+              ├── my_model.h5
               ├── traffic_classifier.h5
-          ├── gui.py
           ├── Pipfile
-          ├── traffic_sign.py
       ├── Initial
           ├── Python-Project-Traffic-Sign-Classification.zip
           ├── Web.zip
