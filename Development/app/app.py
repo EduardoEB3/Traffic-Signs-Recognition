@@ -41,7 +41,7 @@ if option != "Home":
 
     elif option == "Information":
         inputFile = codecs.open(
-            "../information/information.md",
+            "/app/traffic-signs-recognition/Development/information/information.md",
             mode="r",
             encoding="utf-8",
         )
@@ -49,7 +49,7 @@ if option != "Home":
 
 else:
     inputFile = codecs.open(
-        "../information/home.md",
+        "/app/traffic-signs-recognition/Development/information/home.md",
         mode="r",
         encoding="utf-8",
     )
