@@ -8,7 +8,7 @@ from signs import *
 
 def traffic_signs_recognition(nameFile):
     # Load the trained model to classify sign
-    model = load_model("../models/" + nameFile)
+    model = load_model("/app/traffic-signs-recognition/Development/models/" + nameFile)
 
     uploaded_file = st.sidebar.file_uploader("Choose a file", type=["jpg", "png"])
 
