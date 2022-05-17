@@ -1,3 +1,8 @@
+# Eduardo Expósito Barrera
+# Final Degree Project
+# Degree in Computer Engineering (Fourth)
+# File containing the signal classifier
+
 import streamlit as st
 import numpy as np
 import time
@@ -5,7 +10,7 @@ from keras.models import load_model
 from PIL import Image
 from signs import *
 
-
+# Function that performs recognition of the signal specified by the user
 def traffic_signs_recognition(nameFile):
     # Load the trained model to classify sign
     model = load_model("/app/traffic-signs-recognition/Development/models/" + nameFile)

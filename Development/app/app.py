@@ -1,17 +1,25 @@
+# Eduardo Expósito Barrera
+# Final Degree Project
+# Degree in Computer Engineering (Fourth)
+# File containing the development of the application
+
 import streamlit as st
 import codecs
 from classifier import *
 
+# Application title definition
 st.title("Traffic Signs Recognition")
 
 # Making sidebar
 st.sidebar.title("Menu")
 
+# Definition of sidebar options
 option = st.sidebar.selectbox(
     "Select an option",
     ("Home", "Upload an image", "Information"),
 )
 
+# Implementation of sidebar options
 if option != "Home":
     if option == "Upload an image":
         option = st.selectbox("Select an option", ("", "Default model", "Other model"))
