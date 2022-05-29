@@ -10,4 +10,4 @@
 ## Support 💻
 <p align="center">
     <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzDsVmJPGLvKPcnVTBhCHcXWvtDKWLPBbdrDPwxMVPBChGSXpQwRqsCmWvDxkmKfnqCrwQd" target="blank"><img align="center" src="https://raw.githubusercontent.com/fgnass/gmail-app/master/icon.iconset/icon_256x256.png" height="30" width="40" /></a>
-<p align="center">
+</p>
