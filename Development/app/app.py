@@ -3,8 +3,8 @@
 # Degree in Computer Engineering (Fourth)
 # File containing the development of the application
 
-import streamlit as st
 import codecs
+import streamlit as st
 from classifier import *
 
 # Application title definition

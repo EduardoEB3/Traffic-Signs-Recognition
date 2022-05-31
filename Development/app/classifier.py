@@ -3,12 +3,12 @@
 # Degree in Computer Engineering (Fourth)
 # File containing the signal classifier
 
-import streamlit as st
-import numpy as np
 import time
-from keras.models import load_model
-from PIL import Image
+import numpy as np
+import streamlit as st
 from signs import *
+from PIL import Image
+from keras.models import load_model
 
 # Function that performs recognition of the signal specified by the user
 def traffic_signs_recognition(nameFile):

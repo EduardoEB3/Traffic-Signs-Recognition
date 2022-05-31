@@ -1,12 +1,12 @@
 # Import required libraries
+import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
-import os
-from sklearn.model_selection import train_test_split
-from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.models import Sequential
+from tensorflow.keras.utils import to_categorical
+from sklearn.model_selection import train_test_split
 from tensorflow.keras.layers import Conv2D, MaxPool2D, Dense, Flatten, Dropout
 
 data = []
