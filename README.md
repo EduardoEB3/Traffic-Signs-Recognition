@@ -27,6 +27,7 @@ The directory is organized as follows:
       ├── Development
           ├── app
               ├── app.py
+              ├── classifier.py
               ├── requirements.txt
               ├── signs.py
           ├── img
@@ -37,6 +38,12 @@ The directory is organized as follows:
           ├── model_generator
               ├── traffic_sign.py
           ├── models
+              ├── model8.h5
+              ├── model10.h5
+              ├── model12.h5
+              ├── model15.h5
+              ├── model18.h5
+              ├── model20.h5
               ├── my_best_model.h5
               ├── my_model.h5
               ├── traffic_classifier.h5
