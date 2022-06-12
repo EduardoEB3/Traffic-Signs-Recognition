@@ -31,7 +31,7 @@ The directory is organized as follows:
               ├── requirements.txt
               ├── signs.py
           ├── img
-              ├── ULL.png
+              ├── Logo.jpg
           ├── information
               ├── home.md
               ├── information.md
