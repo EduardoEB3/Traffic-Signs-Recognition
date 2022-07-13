@@ -47,7 +47,6 @@ The directory is organized as follows:
               ├── my_best_model.h5
               ├── my_model.h5
               ├── traffic_classifier.h5
-          ├── Pipfile
       ├── Initial
           ├── Python-Project-Traffic-Sign-Classification.zip
           ├── Web.zip
